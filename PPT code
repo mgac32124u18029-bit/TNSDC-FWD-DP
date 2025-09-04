@@ -1,0 +1,234 @@
+java code
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim(kamalesh k);
+  const email = document.getElementById('email').value.trim(mgsc32124u18029@gmail.com);
+  const message = document.getElementById('message').value.trim();
+  const status = document.getElementById('form-status');
+
+  if (name && email && message) {
+    status.textContent = "Thank you for your message, Kamalesh!";
+    status.style.color = "#70d6ff";
+    this.reset();
+  } else {
+    status.textContent = "Please fill in all fields.";
+    status.style.color = "red";
+  }
+});
+css code
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1e1e2f;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+header {
+  background: #151522;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  color: #70d6ff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #70d6ff;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1e1e2f, #151522);
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: #70d6ff;
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+#skills .skill {
+  margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+  width: 100%;
+  background: #333;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #70d6ff;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.project {
+  background: #2c2c3f;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.project a {
+  color: #70d6ff;
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  background: #2c2c3f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #70d6ff;
+  color: #1e1e2f;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #56c5e0;
+}
+
+footer {
+  text-align: center;
+  background-color: #151522;
+  padding: 1.5rem;
+  color: #aaa;
+}
+html code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kamalesh | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Kamalesh</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Hi, I'm Kamalesh</h2>
+      <p>A Web Developer with a passion for coding</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm Kamalesh, a passionate developer with strong knowledge of web technologies and programming concepts. I enjoy turning ideas into functional applications.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill">
+      <label>CSS</label>
+      <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+    </div>
+    <div class="skill">
+      <label>OOP</label>
+      <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+    </div>
+    <div class="skill">
+      <label>Java</label>
+      <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project">
+        <h3>Project One</h3>
+        <p>A simple website built with HTML, CSS, and JavaScript.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project">
+        <h3>Project Two</h3>
+        <p>A Java-based desktop application showcasing OOP principles.</p>
+        <a href="#">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+      <p id="form-status"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Kamalesh. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
